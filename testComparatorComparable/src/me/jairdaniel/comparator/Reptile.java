@@ -1,16 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package me.jairdaniel.comparable;
+package me.jairdaniel.comparator;
 
 /**
+ * The same Reptile class as in me.jairdaniel.comparable excluding Comparable interface implementation.
+ * @author jxcorreasanchez
  *
- * @author jairdaniel
  */
-public class Reptile implements Comparable<Reptile>{
-    private String name;
+public class Reptile {
+
+	private String name;
     private String species;
 
     public Reptile(String name, String species){
@@ -30,15 +27,6 @@ public class Reptile implements Comparable<Reptile>{
         this.species = species;
     }
 
-    /**
-     * Compares name and species Strings.
-     */
-    @Override
-    public int compareTo(Reptile other) {
-        int compareName = this.name.compareTo(other.name);
-        return compareName == 0? this.species.compareTo(other.species): compareName;
-    }
-
     @Override
     public String toString() {
         StringBuilder message = new StringBuilder("Hello my name is ");
@@ -47,6 +35,4 @@ public class Reptile implements Comparable<Reptile>{
         message.append(this.species);
         return message.toString();
     }
-    
-    
 }
